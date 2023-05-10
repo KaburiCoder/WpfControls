@@ -1,0 +1,17 @@
+C:\Youtube\WPFSlidePanel\WpfControls\bin\Release\net7.0-windows\WpfControls.deps.json
+C:\Youtube\WPFSlidePanel\WpfControls\bin\Release\net7.0-windows\WpfControls.dll
+C:\Youtube\WPFSlidePanel\WpfControls\bin\Release\net7.0-windows\WpfControls.pdb
+C:\Youtube\WPFSlidePanel\WpfControls\obj\Release\net7.0-windows\WpfControls.csproj.AssemblyReference.cache
+C:\Youtube\WPFSlidePanel\WpfControls\obj\Release\net7.0-windows\Controls\SlidePanel.g.cs
+C:\Youtube\WPFSlidePanel\WpfControls\obj\Release\net7.0-windows\WpfControls_MarkupCompile.cache
+C:\Youtube\WPFSlidePanel\WpfControls\obj\Release\net7.0-windows\WpfControls_MarkupCompile.lref
+C:\Youtube\WPFSlidePanel\WpfControls\obj\Release\net7.0-windows\Controls\SlidePanel.baml
+C:\Youtube\WPFSlidePanel\WpfControls\obj\Release\net7.0-windows\WpfControls.g.resources
+C:\Youtube\WPFSlidePanel\WpfControls\obj\Release\net7.0-windows\WpfControls.GeneratedMSBuildEditorConfig.editorconfig
+C:\Youtube\WPFSlidePanel\WpfControls\obj\Release\net7.0-windows\WpfControls.AssemblyInfoInputs.cache
+C:\Youtube\WPFSlidePanel\WpfControls\obj\Release\net7.0-windows\WpfControls.AssemblyInfo.cs
+C:\Youtube\WPFSlidePanel\WpfControls\obj\Release\net7.0-windows\WpfControls.csproj.CoreCompileInputs.cache
+C:\Youtube\WPFSlidePanel\WpfControls\obj\Release\net7.0-windows\WpfControls.dll
+C:\Youtube\WPFSlidePanel\WpfControls\obj\Release\net7.0-windows\refint\WpfControls.dll
+C:\Youtube\WPFSlidePanel\WpfControls\obj\Release\net7.0-windows\WpfControls.pdb
+C:\Youtube\WPFSlidePanel\WpfControls\obj\Release\net7.0-windows\ref\WpfControls.dll
