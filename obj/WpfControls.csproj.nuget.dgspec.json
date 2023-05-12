@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Youtube\\WpfControls\\WpfControls.csproj": {}
+    "C:\\Youtube\\_sliderPanel\\WpfControls\\WpfControls.csproj": {}
   },
   "projects": {
-    "C:\\Youtube\\WpfControls\\WpfControls.csproj": {
+    "C:\\Youtube\\_sliderPanel\\WpfControls\\WpfControls.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Youtube\\WpfControls\\WpfControls.csproj",
+        "projectUniqueName": "C:\\Youtube\\_sliderPanel\\WpfControls\\WpfControls.csproj",
         "projectName": "WpfControls",
-        "projectPath": "C:\\Youtube\\WpfControls\\WpfControls.csproj",
+        "projectPath": "C:\\Youtube\\_sliderPanel\\WpfControls\\WpfControls.csproj",
         "packagesPath": "C:\\Users\\RENEWCOM PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Youtube\\WpfControls\\obj\\",
+        "outputPath": "C:\\Youtube\\_sliderPanel\\WpfControls\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages",

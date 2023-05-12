@@ -11,6 +11,11 @@ namespace WpfControls.Controls
   {
     private Border? _slider;
     private SliderState _sliderState = SliderState.Closed;
+    private readonly Lazy<AnimationManager> _slideAnimationLazy;
+    private readonly Lazy<AnimationManager> _leftAnimationLazy;
+
+    private AnimationManager SlideAnimation => _slideAnimationLazy.Value;
+    private AnimationManager LeftAnimation => _leftAnimationLazy.Value;
 
     public static readonly DependencyProperty SliderWidthProperty =
         DependencyProperty.Register("SliderWidth", typeof(double), typeof(SlidePanel), new PropertyMetadata(300d, OnSliderChanged));
@@ -46,9 +51,8 @@ namespace WpfControls.Controls
     private void BeginAnimation()
     {
       (double from, double to) leftRange = GetLeftRange();
-      Storyboard storyboard = _slider!.CreateLeftPropertyStoryboard(from: leftRange.from, to: leftRange.to, milliseconds: AnimationSpeed);
-      storyboard.Completed += Storyboard_Completed;
-      storyboard.Begin();
+      SlideAnimation.SetLeftProperty(from: leftRange.from, to: leftRange.to, milliseconds: AnimationSpeed);
+      SlideAnimation.Begin();      
     }
 
     /// <summary>
@@ -87,32 +91,26 @@ namespace WpfControls.Controls
       }
     }
 
+    private double OpenedLeft => SliderLocation == SliderLocation.Left
+      ? 0
+      : ParentActualWidth - SliderWidth;
+
+    private double ClosedLeft => SliderLocation == SliderLocation.Left
+      ? -SliderWidth
+      : ParentActualWidth;
+
     /// <summary>
     /// slidePanel의 속성에 따른 애니메이션 Left의 from, to값 반환 메서드
     /// </summary>
     private (double from, double to) GetLeftRange()
     {
-      if (SliderLocation == SliderLocation.Left)
+      if (_sliderState == SliderState.Opening)
       {
-        if (_sliderState == SliderState.Opening)
-        {
-          return (from: -SliderWidth, to: 0);
-        }
-        else
-        {
-          return (from: 0, to: -SliderWidth);
-        }
+        return (from: ClosedLeft, to: OpenedLeft);
       }
       else
       {
-        if (_sliderState == SliderState.Opening)
-        {
-          return (from: ParentActualWidth, to: ParentActualWidth - SliderWidth);
-        }
-        else
-        {
-          return (from: ParentActualWidth - SliderWidth, to: ParentActualWidth);
-        }
+        return (from: OpenedLeft, to: ClosedLeft);
       }
     }
 
@@ -123,6 +121,18 @@ namespace WpfControls.Controls
     {
       this.SendToBack();
       ChangeSliderLeft();
+    }
+
+    private void SlidePanel_SizeChanged(object sender, SizeChangedEventArgs e)
+    {
+      if (SliderLocation == SliderLocation.Right)
+      {
+        if (_sliderState == SliderState.Opened || _sliderState == SliderState.Opening)
+        {
+          LeftAnimation.SetLeftProperty(from: OpenedLeft, to: OpenedLeft, milliseconds: 0);
+          LeftAnimation.Begin();          
+        }
+      }
     }
 
     /// <summary>
@@ -142,6 +152,15 @@ namespace WpfControls.Controls
     {
       InitializeComponent();
       Loaded += SlidePanel_Loaded;
+      SizeChanged += SlidePanel_SizeChanged;
+
+      _slideAnimationLazy = new Lazy<AnimationManager>(() =>
+      {
+        var animationManager = new AnimationManager(_slider!);
+        animationManager.Storyboard.Completed += Storyboard_Completed;
+        return animationManager;
+      });
+      _leftAnimationLazy = new Lazy<AnimationManager>(()=> new AnimationManager(_slider!));
     }
 
     /// <summary>
