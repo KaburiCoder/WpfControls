@@ -4,17 +4,17 @@
 library
 C#
 .cs
-C:\Youtube\_sliderPanel\WpfControls\obj\Debug\net7.0-windows\
+C:\Youtube\_modal\WpfControls\obj\Debug\net7.0-windows\
 WpfControls
 none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 
-11616414224
+2-668764724
 
-7-1486194852
+91859378302
 198-2048575587
-Controls\SlidePanel.xaml;
+Controls\Modal_\Modal.xaml;Controls\SlidePanel_\SlidePanel.xaml;
 
 False
 

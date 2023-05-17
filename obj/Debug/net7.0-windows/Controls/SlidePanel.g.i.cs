@@ -61,7 +61,7 @@ namespace WpfControls.Controls {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WpfControls;component/controls/slidepanel.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WpfControls;V1.0.0.0;component/controls/slidepanel.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Controls\SlidePanel.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

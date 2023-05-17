@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cTVHMHTKRDkv52bI4C5r+DEJP8CzBAwbXcagpit+TEmjOIXDOESmSMlg0V5RBDE9c4R4Uqpnu9xBiPRnbS1R3w==",
+  "dgSpecHash": "KA/1C3ljaugQBzXi/KbNA2xWd9K62rWHhkbI+Thm+J3tBNItMCtG9NmMweHO90YoNNrqhdoQnpmysXSsjwtnUw==",
   "success": true,
-  "projectFilePath": "C:\\Youtube\\_sliderPanel\\WpfControls\\WpfControls.csproj",
+  "projectFilePath": "C:\\Youtube\\_modal\\WpfControls\\WpfControls.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

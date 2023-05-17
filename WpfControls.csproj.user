@@ -2,12 +2,18 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
-    <Compile Update="Controls\SlidePanel.xaml.cs">
+    <Compile Update="Controls\Modal_\Modal.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\SlidePanel_\SlidePanel.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Controls\SlidePanel.xaml">
+    <Page Update="Controls\Modal_\Modal.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\SlidePanel_\SlidePanel.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
